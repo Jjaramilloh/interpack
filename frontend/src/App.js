@@ -3,17 +3,17 @@ import axios from 'axios';
 
 function App() {
 
-  const [message, setMessage] = useState('');
+  const [id, setSenders] = useState('');
 
   useEffect(()=>{
-    axios.get('http://192.168.1.11:5000/api')
-          .then(response => setMessage(response.data.message))
+    axios.get('http://localhost:9000/senders')
+          .then(response => setSenders(response.data.id))
           .catch(error => console.error(error))
   }, []);
 
   return (
     <div>
-        <h1>{message || "Loading..."}</h1>
+        <h1>{id || "Loading..."}</h1>
     </div>
     
   );
