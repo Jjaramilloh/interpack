@@ -1,19 +1,27 @@
-import React, { useEffect, useState} from 'react';
-import axios from 'axios';
+import './App.css';
+//importamos los componenetes
+import CompShowsenders from "./Components/senders/CompShowsenders";
+import CreateSender from './Components/senders/CreateSenders';
+import EditSender from './Components/senders/EditSenders';
+import ExampleComponent from './Components/senders/prueba';
+
+//importamos el router
+import { BrowserRouter,Route ,Routes } from 'react-router-dom'
 
 function App() {
 
-  const [id, setSenders] = useState('');
-
-  useEffect(()=>{
-    axios.get('http://localhost:9000/senders')
-          .then(response => setSenders(response.data.id))
-          .catch(error => console.error(error))
-  }, []);
 
   return (
     <div>
-        <h1>{id || "Loading..."}</h1>
+        <BrowserRouter>
+          <Routes>
+            <Route path ='/' element= {<CompShowsenders/>}/>
+            <Route path='/create' element= {<CreateSender/>}/>
+            <Route path='/edit/:id' element= {<EditSender/>}/>
+            <Route path='/prueba' element= {<ExampleComponent/>}/>
+          </Routes>
+        
+        </BrowserRouter>
     </div>
     
   );
