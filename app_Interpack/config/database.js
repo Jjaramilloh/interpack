@@ -50,12 +50,12 @@ const db = new Sequelize(process.env.DATABASE, process.env.USER, process.env.PAS
   port: process.env.DB_PORT,
   dialect: 'postgres',
   // Descomenta las siguientes líneas si necesitas habilitar SSL (AWS)
-  dialectOptions: {
-    ssl: {
-      require: true,
-      rejectUnauthorized: false // Asegúrate de tener certificados configurados si cambias esto a true
-    }
-  }
+//   dialectOptions: {
+//     ssl: {
+//       require: true,
+//       rejectUnauthorized: false // Asegúrate de tener certificados configurados si cambias esto a true
+//     }
+//   }
 });
 
 // Probar la conexión

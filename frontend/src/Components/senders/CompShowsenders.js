@@ -26,7 +26,7 @@ const CompShowsenders = () => {
                         <thead className='table-primary'>
                             <tr>
                                 <th>Id</th>
-                                <th>Codigo Interno</th>
+                                <th>DNI</th>
                                 <th>Nombre</th>
                                 <th>Apellido</th>
                                 <th>Direccion</th>
@@ -39,7 +39,7 @@ const CompShowsenders = () => {
                             {senders.map ( (sender)=>(
                             <tr key={sender.id}>
                                 <td>{sender.id}</td>
-                                <td>{sender.codigo_interpack}</td>
+                                <td>{sender.dni_remitente}</td>
                                 <td>{sender.nombre_remitente}</td>
                                 <td>{sender.apellido_remitente}</td>
                                 <td>{sender.direccion_remitente}</td>

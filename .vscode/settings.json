@@ -1,0 +1,13 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 7496,
+            "driver": "PostgreSQL",
+            "name": "biotime",
+            "database": "biotime",
+            "username": "postgres"
+        }
+    ]
+}

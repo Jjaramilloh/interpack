@@ -3,6 +3,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 
 import routeSenders from './app/routes/routeSenders.js';
+import routeCities from './app/routes/routeCities.js';
 
 dotenv.config();
 
@@ -15,6 +16,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use('/senders',routeSenders)
+app.use('/cities',routeCities)
 
 app.get('/api', (req, res)=>{
     res.json({message: "Hola desde el backend"})
